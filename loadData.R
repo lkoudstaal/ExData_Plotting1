@@ -26,7 +26,7 @@ loadData <- function() {
                                      "Global_intensity", "Sub_metering_1",
                                      "Sub_metering_2", "Sub_metering_3"))
 
-    data$DateTime <- with(data, mapply(paste, Date, Time, USE.NAMES = FALSE))
-    data$DateTime <- strptime(data$DateTime, format = "%d/%m/%Y %H:%M:%S")
+    data$datetime <- with(data, mapply(paste, Date, Time, USE.NAMES = FALSE))
+    data$datetime <- strptime(data$datetime, format = "%d/%m/%Y %H:%M:%S")
     return(data)
 }
