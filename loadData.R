@@ -1,6 +1,6 @@
 loadData <- function() {
     # Read first line and calculate starting date
-    first_row <- read.table(file = "household_power_consumption.txt", nrows = 1, 
+    first_row <- read.table(file = "../household_power_consumption.txt", nrows = 1, 
                             skip = 1, sep = ";", header = FALSE, 
                             stringsAsFactors = FALSE, 
                             col.names = c("Date", "Time", "Global_active_power",
@@ -18,7 +18,7 @@ loadData <- function() {
     rows_to_read <- end_dt - start_dt # in days
     rows_to_read <- as.double(rows_to_read) * 24 * 60
     
-    data <- read.table(file = "household_power_consumption.txt", 
+    data <- read.table(file = "../household_power_consumption.txt", 
                        nrows = rows_to_read, skip = rows_to_skip, sep = ";", 
                        header = FALSE, stringsAsFactors = FALSE, 
                        col.names = c("Date", "Time", "Global_active_power",
