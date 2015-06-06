@@ -13,7 +13,8 @@ loadData <- function() {
     # by reading the first line and getting the first date in the data.
     first_row <- read.table(file = "../household_power_consumption.txt", 
                             nrows = 1, skip = 1, sep = ";", header = FALSE, 
-                            stringsAsFactors = FALSE, 
+                            stringsAsFactors = FALSE,  
+                            na.strings = "?",
                             col.names = c("Date", "Time", "Global_active_power",
                                           "Global_reactive_power", "Voltage",
                                           "Global_intensity", "Sub_metering_1",
